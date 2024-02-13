@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imv_bg"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fitquest_bg" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+
+        android:text="Welcome to the"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imv_bg" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="-14dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="FitQuest App"
+
+        android:textColor="@color/text_main"
+        android:textSize="44sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+    <TextView
+        android:id="@+id/tv_p"
+        android:layout_width="311dp"
+        android:layout_height="49dp"
+
+        android:ems="10"
+
+        android:layout_marginTop="-18dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="Get your dream body in 30 days"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <Button
+        android:id="@+id/btn_getStarted"
+        android:layout_width="262dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/button_colors"
+        android:elevation="10dp"
+        android:fontFamily="@font/poppins_bold"
+
+        android:outlineAmbientShadowColor="@color/button_colors"
+        android:outlineSpotShadowColor="@color/button_colors"
+        android:text="Get Started"
+        android:textColor="@android:color/white"
+
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
