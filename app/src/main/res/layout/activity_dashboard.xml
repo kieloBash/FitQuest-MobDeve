@@ -44,19 +44,20 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <!-- Scrollable Main Content -->
+    <!-- Main Content -->
 
-    <androidx.core.widget.NestedScrollView
+    <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/header_toolbar"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header_toolbar">
 
         <!-- Your main content views go here -->
 
-    </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
 
     <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -68,6 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:background="@drawable/gradient_background"
-        app:menu="@menu/my_menu" >
+        app:menu="@menu/bottom_navigations" >
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
