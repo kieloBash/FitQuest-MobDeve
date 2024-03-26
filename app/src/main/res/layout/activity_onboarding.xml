@@ -53,7 +53,7 @@
     <LinearLayout
         android:id="@+id/blue_section"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:layout_gravity="bottom"
         android:background="@drawable/rectangle"
         android:gravity="bottom"
@@ -62,7 +62,7 @@
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circular"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="231dp"> <!-- I cant make it rounded -->
+        tools:layout_editor_absoluteY="215dp"> <!-- I cant make it rounded -->
 
         <!-- First Question -->
 
@@ -75,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
             android:layout_marginBottom="0dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Name"
@@ -86,17 +87,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="20"
-            android:textColorHint="#FFFFFF" />
+            android:hint="name"
+            android:textColorHint="#color/gray" />
 
         <TextView
             android:id="@+id/fitlevel_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="What is your fitness level?"
+            android:text="Email"
             android:textColor="#FFFFFF"
             android:textSize="28sp" />
 
@@ -106,17 +107,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Workout regularly"
-            android:textColorHint="#FFFFFF" />
+            android:hint="Fitquest@email.com"
+            android:textColorHint="color/gray" />
 
         <TextView
             android:id="@+id/password_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="What is your fitness level?"
+            android:text="Password"
             android:textColor="#FFFFFF"
             android:textSize="28sp" />
 
@@ -126,8 +127,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Workout regularly"
-            android:textColorHint="#FFFFFF" />
+            android:hint="Password"
+            android:textColorHint="#color/gray" />
 
         <!-- Confirm Button -->
         <Button
@@ -136,7 +137,7 @@
             android:layout_height="53dp"
             android:layout_marginStart="55dp"
             android:layout_marginTop="100dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="100dp"
             android:backgroundTint="@android:color/white"
             android:elevation="10dp"
             android:fontFamily="@font/poppins_bold"
