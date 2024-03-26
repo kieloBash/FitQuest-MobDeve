@@ -9,57 +9,179 @@
 
     <!-- Header Toolbar -->
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/header_toolbar"
+    <!-- Main Content -->
+
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation View -->
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="590dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="62dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/header_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Greetings!"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Let's start working out now!"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/header_greeting" />
+
+        <LinearLayout
+            android:id="@+id/blue_section"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rectangle"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="231dp">
+
+            <ImageView
+                android:id="@+id/button_image"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:padding="0dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="0dp"
+                app:srcCompat="@drawable/fitquest_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@id/button_image"
+                app:layout_constraintEnd_toEndOf="@id/button_image">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="30sp"
+                    android:text="hello"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:textSize="20sp"
+                    android:text="8 min. duration"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="0dp"
+                    android:textSize="20sp"
+                    android:text="12 workouts"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Progress"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/progress_section"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_gravity="left"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="@color/white"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="0dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="231dp">
+
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="6%"
+                android:textColor="@color/text_main"
+                android:textSize="70sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_motivation"
+                android:layout_width="113dp"
+                android:layout_height="20dp"
+                android:layout_gravity="top"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="top|center"
+                android:padding="0dp"
+                android:text="Youre almost there!"
+                android:textColor="@color/text_main"
+                android:layout_marginLeft="20dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/percent" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Today"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/header_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginTop="-6dp"
-                android:text="Feb 13, 2024"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp" />
         </LinearLayout>
 
-    </com.google.android.material.appbar.MaterialToolbar>
+    </LinearLayout>
 
-    <!-- Main Content -->
-
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_toolbar">
-
-        <!-- Your main content views go here -->
-
-    </FrameLayout>
-
-    <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
